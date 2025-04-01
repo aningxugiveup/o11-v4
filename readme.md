@@ -1,4 +1,8 @@
 ```bash
+
+
+docker pull docker.io/library/ubuntu:22.04
+
 git clone https://github.com/pigzillaaaaa/o11-v4
 
 cd o11-v4
