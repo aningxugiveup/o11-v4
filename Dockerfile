@@ -76,4 +76,4 @@ EXPOSE 80 443 5454 8484
 ENV SERVER_TYPE=nodejs
 ENV IP_ADDRESS=""
 
-CMD ["/home/o11/start.sh"]
+CMD ["bash", "/home/o11/start.sh"]
