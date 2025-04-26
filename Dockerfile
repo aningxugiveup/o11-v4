@@ -28,11 +28,11 @@ COPY server.js server.py run.sh o11.cfg o11v4 lic.cr /home/o11/
 # Ensure Unix line endings for run.sh
 RUN sed -i 's/\r$//' /home/o11/run.sh
 
-RUN chmod +x /home/o11/run.sh
+RUN chmod 755 /home/o11/run.sh
 
-RUN chmod +x /home/o11/o11v4
+RUN chmod 755 /home/o11/o11v4
 
-RUN chmod +x /home/o11/lic.cr
+RUN chmod 755 /home/o11/lic.cr
 
 RUN mkdir -p /home/o11/certs && \
     openssl req -x509 -newkey rsa:2048 -keyout /home/o11/certs/key.pem -out /home/o11/certs/cert.pem -days 365 -nodes -subj "/CN=localhost"
@@ -69,7 +69,7 @@ EOF
 # Ensure Unix line endings
 RUN sed -i 's/\r$//' /home/o11/start.sh
 
-RUN chmod +x /home/o11/start.sh
+RUN chmod 755 /home/o11/start.sh
 
 EXPOSE 80 443 5454 8484
 
