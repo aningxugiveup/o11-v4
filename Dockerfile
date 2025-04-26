@@ -63,6 +63,9 @@ nohup ./run.sh > /dev/null 2>&1 &
 pm2 logs
 EOF
 
+# Ensure Unix line endings
+RUN sed -i 's/\r$//' /home/o11/start.sh
+
 RUN chmod +x /home/o11/start.sh
 
 EXPOSE 80 443 5454 8484
