@@ -25,6 +25,9 @@ RUN pip3 install flask
 
 COPY server.js server.py run.sh o11.cfg o11v4 lic.cr /home/o11/
 
+# Ensure Unix line endings for run.sh
+RUN sed -i 's/\r$//' /home/o11/run.sh
+
 RUN chmod +x /home/o11/run.sh
 
 RUN chmod +x /home/o11/o11v4
