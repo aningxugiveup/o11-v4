@@ -23,6 +23,20 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 
 RUN pip3 install flask
 
+RUN mkdir -p \
+    hls/live \
+    hls/replay \
+    dl/tmp \
+    scripts \
+    logs \
+    rec && \
+    chmod -R 755 \
+    hls \
+    dl \
+    scripts \
+    logs \
+    rec
+
 COPY server.js server.py run.sh o11.cfg o11v4 lic.cr /home/o11/
 
 # Ensure Unix line endings for run.sh
