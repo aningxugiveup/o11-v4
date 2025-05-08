@@ -9,8 +9,8 @@ const hostspath = '/etc/hosts';
 const domain = 'lic.cryptolive.one';
 const domain2 = 'lic.bitmaster.cc';
 const ipAddress = '';
-const portHttp = 18080;
-const portHttps = 18443;
+const portHttp = 8080;
+const portHttps = 8443;
 
 // Start Express Server
 const app = express();
@@ -73,7 +73,7 @@ const options = {
 };
 
 // Start HTTP and HTTPS servers
-[18080, 15454].forEach(port => {
+[8080, 5454].forEach(port => {
     http.createServer(app).listen(port, () => {
     console.log(`HTTP server running on port ${port}`);
     });
