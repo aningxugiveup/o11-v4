@@ -85,7 +85,7 @@ RUN sed -i 's/\r$//' /home/o11/start.sh
 
 RUN chmod 755 /home/o11/start.sh
 
-EXPOSE 80 443 5454 8484
+EXPOSE 18080 18443 15454 18484
 
 ENV SERVER_TYPE=nodejs
 ENV IP_ADDRESS=""
