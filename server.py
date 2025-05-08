@@ -11,8 +11,8 @@ HOSTS_PATH = "/etc/hosts"
 DOMAIN = "lic.cryptolive.one"
 DOMAIN2 = "lic.bitmaster.cc"
 IP_ADDRESS = ""
-PORT_HTTP = 18080
-PORT_HTTPS = 18443
+PORT_HTTP = 8080
+PORT_HTTPS = 8443
 CERTS_PATH = "./certs"
 KEY_FILE = os.path.join(CERTS_PATH, "key.pem")
 CERT_FILE = os.path.join(CERTS_PATH, "cert.pem")
@@ -105,4 +105,4 @@ if __name__ == "__main__":
     threading.Thread(target=run_http_server, daemon=True).start()
     threading.Thread(target=run_https_server, daemon=True).start()
     
-    app.run(host="0.0.0.0", port=15454)
+    app.run(host="0.0.0.0", port=5454)
